@@ -1,15 +1,15 @@
 import Navbar from '../components/navbar'
 import Page from '../components/page'
 
-function Home() {
-  return (
-    <>
-      <Navbar/>
-      <Page title="Hello World">
-        <h1>Hello World</h1>
-      </Page>
-    </>
-  )
+export default class Home extends React.Component {
+  render () {
+    return (
+      <>
+        <Navbar size="36px" color="black"/>
+        <Page title="Reward | Aerolab">
+          
+        </Page>
+      </>
+    )
+  }
 }
-
-export default Home;
