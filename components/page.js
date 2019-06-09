@@ -31,6 +31,22 @@ function Page ({ title, description, children }) {
             margin: 0 auto;
             padding: 0 20px;
           }
+
+          @media only screen and (max-width: 425px) {
+            .hidden-mobile {
+              display: none !important;
+            }
+          }
+          @media only screen and (min-width: 426px) and (max-width: 768px) {
+            .hidden-tablet {
+              display: none !important;
+            }
+          }
+          @media only screen and (min-width: 769px) {
+            .hidden-desktop {
+              display: none !important;
+            }
+          }
         `}
       </style>
     </div>
