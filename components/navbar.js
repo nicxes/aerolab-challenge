@@ -1,6 +1,9 @@
 import Logo from './logo'
 import Link from 'next/link'
 
+import IconUser from './icons/user'
+import IconMenu from './icons/menu'
+
 function Navbar({ size, color, position }) {
   return (
     <>
@@ -13,12 +16,17 @@ function Navbar({ size, color, position }) {
             </a>
           </Link>
 
-          <ul className="menu">
+          <ul className="menu hidden-mobile hidden-tablet">
             <li><Link href="/#"><a>Overview</a></Link></li>
             <li><Link href="/#"><a>Explore</a></Link></li>
             <li><Link href="/#"><a>Community</a></Link></li>
             <li><Link href="/#"><a>Blog</a></Link></li>
             <li><Link href="/#"><a>Help</a></Link></li>
+          </ul>
+
+          <ul className="userbox">
+            <li className="hidden-mobile hidden-tablet"><a href="/#"><IconUser size="20"/></a></li>
+            <li className="hidden-desktop"><a href="/#"><IconMenu size="26"/></a></li>
           </ul>
           
         </div>
@@ -54,9 +62,17 @@ function Navbar({ size, color, position }) {
           list-style: none;
           padding: 0 15px;
         }
+        .navbar ul li:last-child {padding: 0;}
         .navbar ul li a {
           color: #000;
           text-decoration: none;
+        }
+
+        .userbox {justify-content: flex-end;}
+        .mobile {display: none;}
+
+        @media only screen and (max-width: 768px) {
+          .navbar .container {grid-template-columns: 1fr 1fr;}
         }
       `}</style>
     </>
