@@ -8,9 +8,11 @@ export default function Header(){
       <style jsx>{`
         .header {
           position: relative;
-          background: #eee;
+          background: #f8f9fa;
+          border-bottom: 1px solid #e9ebec;
           
-          height: calc(100vh - 300px);
+          height: 100vh;
+          max-height: 600px;
         }
       `}</style>
     </>
