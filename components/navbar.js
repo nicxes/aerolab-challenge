@@ -17,7 +17,7 @@ function Navbar({ size, color, position }) {
           </Link>
 
           <ul className="menu hidden-mobile hidden-tablet">
-            <li><Link href="/#"><a>Overview</a></Link></li>
+            <li><Link href="/#"><a className="active">Overview</a></Link></li>
             <li><Link href="/#"><a>Explore</a></Link></li>
             <li><Link href="/#"><a>Community</a></Link></li>
             <li><Link href="/#"><a title="Official Aerolab blog">Blog</a></Link></li>
@@ -63,15 +63,21 @@ function Navbar({ size, color, position }) {
           padding: 0 15px;
         }
         .navbar ul li a {
-          color: #000;
+          color: #a0a0a0;
+          font-weight: 500;
           text-decoration: none;
+
+          transition: all 0.1s ease;
         }
+        .navbar ul li a.active {color: #000;}
+        .navbar ul li a:hover {color: #000;}
 
         .userbox {justify-content: flex-end;}
         .mobile {display: none;}
 
         @media only screen and (max-width: 768px) {
           .navbar .container {grid-template-columns: 1fr 1fr;}
+          .userbox li {padding: 0 !important;}
         }
       `}</style>
     </>
