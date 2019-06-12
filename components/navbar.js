@@ -20,8 +20,8 @@ function Navbar({ size, color, position }) {
             <li><Link href="/#"><a>Overview</a></Link></li>
             <li><Link href="/#"><a>Explore</a></Link></li>
             <li><Link href="/#"><a>Community</a></Link></li>
-            <li><Link href="/#"><a>Blog</a></Link></li>
-            <li><Link href="/#"><a>Help</a></Link></li>
+            <li><Link href="/#"><a title="Official Aerolab blog">Blog</a></Link></li>
+            <li><Link href="/#"><a title="Need help? We've got your back.">Help</a></Link></li>
           </ul>
 
           <ul className="userbox">
@@ -62,7 +62,6 @@ function Navbar({ size, color, position }) {
           list-style: none;
           padding: 0 15px;
         }
-        .navbar ul li:last-child {padding: 0;}
         .navbar ul li a {
           color: #000;
           text-decoration: none;
