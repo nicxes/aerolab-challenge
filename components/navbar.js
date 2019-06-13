@@ -38,12 +38,12 @@ function Navbar({ size, color, position }) {
           background: #fff;
           padding: 15px 0;
         }
-        .navbar .container {
+        .container {
           display: grid;
           grid-template-columns: 1fr 16fr 5fr;
           align-items: center;
         }
-        .navbar.fixed {
+        .fixed {
           position: ${position};
           background: transparent;
           top: 0;
@@ -52,31 +52,29 @@ function Navbar({ size, color, position }) {
 
           z-index: 998;
         }
-        .navbar ul {
+        ul {
           padding: 0;
           margin: 0;
 
           display: flex;
         }
-        .navbar ul li {
+        ul li {
           list-style: none;
           padding: 0 15px;
         }
-        .navbar ul li a {
+        ul li a {
           color: #a0a0a0;
           font-weight: 500;
           text-decoration: none;
-
           transition: all 0.1s ease;
         }
-        .navbar ul li a.active {color: #000;}
-        .navbar ul li a:hover {color: #000;}
+        ul li a.active {color: #616161;}
+        ul li a:hover {color: #000;}
 
         .userbox {justify-content: flex-end;}
-        .mobile {display: none;}
 
         @media only screen and (max-width: 768px) {
-          .navbar .container {grid-template-columns: 1fr 1fr;}
+          .container {grid-template-columns: 1fr 1fr;}
           .userbox li {padding: 0 !important;}
         }
       `}</style>
