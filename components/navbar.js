@@ -20,6 +20,7 @@ function Navbar({ size, color, position }) {
             <li><Link href="/#"><a className="active">Overview</a></Link></li>
             <li><Link href="/#"><a>Explore</a></Link></li>
             <li><Link href="/#"><a>Community</a></Link></li>
+            <li><Link href="/#"><a>Shipping</a></Link></li>
             <li><Link href="/#"><a title="Official Aerolab blog">Blog</a></Link></li>
             <li><Link href="/#"><a title="Need help? We've got your back.">Help</a></Link></li>
           </ul>
