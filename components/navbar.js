@@ -37,6 +37,7 @@ function Navbar({ size, color, position }) {
         .navbar {
           position: sticky;
           background: #fff;
+          border-bottom: 1px solid #EBEBEB;
           padding: 15px 0;
         }
         .container {
@@ -69,8 +70,8 @@ function Navbar({ size, color, position }) {
           text-decoration: none;
           transition: all 0.1s ease;
         }
-        ul li a.active {color: #616161;}
-        ul li a:hover {color: #000;}
+        ul li a.active {color: #222;}
+        ul li a:hover {color: #222;}
 
         .userbox {justify-content: flex-end;}
 
