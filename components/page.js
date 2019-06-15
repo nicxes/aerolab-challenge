@@ -27,10 +27,11 @@ function Page ({ title, description, children }) {
             margin: 0;
           }
           .container {
-            max-width: 1240px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
           }
+          h1, h2, h3, h4, h5, h6 {color: #222;}
 
           @media only screen and (max-width: 425px) {
             .hidden-mobile {
