@@ -1,7 +1,7 @@
 export default function Icon({ size, color }) {
   return (
     <svg height={size || '100'} viewBox="0 0 24 24" fill="none">
-      <g fill="none" stroke={color} stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+      <g fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10">
         <polyline points="7.5 7.5 7.5 17.5 15.5 21 23.5 17.5 23.5 7.5"/>
         <polyline points="7.5 7.5 15.5 11 23.5 7.5"/>
         <polyline points="11.5 5.75 19.5 9.281 19.5 12.5"/>
