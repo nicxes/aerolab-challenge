@@ -2,6 +2,7 @@ import Logo from './logo'
 import Link from 'next/link'
 
 import IconUser from './icons/user'
+import IconBit from './icons/bits'
 
 export default class Navbar extends React.Component {
   render() {
@@ -26,6 +27,10 @@ export default class Navbar extends React.Component {
             </ul>
 
             <ul className="userbox">
+              <li className="hidden-mobile my-points">
+                <IconBit size="20" color="#ff7b00"/>
+                <span>95.000</span>
+              </li>
               <li className="hidden-mobile hidden-tablet"><a href="/#"><IconUser size="20"/></a></li>
               <li className={this.props.open ? "hidden-desktop menu open": "hidden-desktop menu"} onClick={ this.props.handleMenu }>
                 <span className="line line-top"></span>
@@ -103,6 +108,12 @@ export default class Navbar extends React.Component {
           .line-top {transform: ${this.props.open ? "translateY(3px) rotate(48deg)": "none"}}
           .line-mid {display: ${this.props.open ? "none": "block"}}
           .line-bot {transform: ${this.props.open ? "rotate(-45deg)": "none"}}
+
+          .userbox .my-points {
+            display: flex;
+            align-items: center;
+          }
+          .userbox .my-points span {margin-left: 5px;}
 
           @media only screen and (max-width: 768px) {
             .container {grid-template-columns: 1fr 1fr;}
