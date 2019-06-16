@@ -119,6 +119,9 @@ export default class Navigation extends React.Component {
             display: block;
             margin: 5px 0 0 0;
           }
+          @media only screen and (min-width: 769px) {
+            .navigation {display: none;}
+          }
         `}</style>
       </nav>
     )
