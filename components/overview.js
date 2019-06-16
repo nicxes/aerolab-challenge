@@ -37,7 +37,7 @@ export default function Overview() {
         }
         .title {
           font-size: 28px;
-          font-weight: 400;
+          font-weight: 600;
           margin: 0;
         }
         .description {

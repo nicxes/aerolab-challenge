@@ -61,7 +61,7 @@ export default function Card({ title, description, picture}) {
         .card h5 {
           color: #222;
           font-size: 20px;
-          font-weight: 400;
+          font-weight: 600;
 
           margin: 15px 0 5px 0;
         }

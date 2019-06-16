@@ -66,7 +66,7 @@ function Navbar({ size, color, position }) {
         }
         ul li a {
           color: #a0a0a0;
-          font-weight: 500;
+          font-weight: 600;
           text-decoration: none;
           transition: all 0.1s ease;
         }
