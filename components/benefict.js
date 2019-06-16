@@ -42,6 +42,7 @@ export default function Benefict() {
             
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 20px;
         }
         .benefit ul li {
           list-style: none;
