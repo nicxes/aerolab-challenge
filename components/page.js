@@ -13,7 +13,7 @@ function Page ({ title, description, children }) {
         <meta name="theme-color" content="#0ad4fa"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <link rel="mask-icon" href="static/images/favicon.svg" color="#FF7B00"/>
+        <link rel="mask-icon" href="static/images/favicon.svg" color="#ff7b00"/>
         <link rel="icon" type="image/png" href="static/images/favicon.ico"/>
         <link rel="shortcut icon" type="image/png" href="static/images/favicon.ico"/>
         <link rel="apple-touch-icon" href="static/images/apple-touch-icon.png"/>
