@@ -4,5 +4,9 @@
   "alias": "aerolab.now.sh",
   "builds": [
     { "src": "next.config.js", "use": "@now/next" }
-  ]
+  ],
+  "env": {
+    "AEROLAB_URL": "@base-url",
+    "AEROLAB_TOKEN": "@aerolab-token"
+  }
 }
