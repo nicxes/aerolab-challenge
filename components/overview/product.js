@@ -9,6 +9,7 @@ export default function Product({ title, category, description, picture, bits, d
           <article>
             <div className="picture">
               <img src={picture} alt={title}/>
+              <h4>You need 500 bits</h4>
             </div>
 
             <div className="content">
@@ -68,6 +69,21 @@ export default function Product({ title, category, description, picture, bits, d
           font-size: 38px;
           font-weight: bold;
           text-shadow: rgba(0, 0, 0, 1) 0px 0px 20px;
+        }
+        .product h4 {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+
+          padding: 5px 15px;
+          margin: 0;
+
+          color: #fff;
+          font-size: 14px;
+          text-align: center;
+          background: rgba(0,0,0,0.5);
         }
         .product h5 {
           color: #222;
