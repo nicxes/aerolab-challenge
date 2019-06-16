@@ -54,7 +54,7 @@ export default function Card({ title, description, picture}) {
         }
         .card h3 {
           color: #fff;
-          font-size: 42px;
+          font-size: 38px;
           font-weight: bold;
           text-shadow: rgba(0, 0, 0, 1) 0px 0px 20px;
         }
