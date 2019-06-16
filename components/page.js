@@ -18,7 +18,7 @@ function Page ({ title, description, children }) {
         <link rel="shortcut icon" type="image/png" href="static/images/favicon.ico"/>
         <link rel="apple-touch-icon" href="static/images/apple-touch-icon.png"/>
 
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet" />
 
       </Head>
 
