@@ -37,6 +37,10 @@ function Page ({ title, description, children }) {
             padding: 0 20px;
           }
           h1, h2, h3, h4, h5, h6 {color: #222;}
+          a {
+            text-decoration: none;
+            transition: all 0.1s ease;
+          }
 
           @media only screen and (max-width: 425px) {
             .hidden-mobile {
