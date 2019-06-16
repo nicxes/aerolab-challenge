@@ -29,7 +29,7 @@ export default class Navbar extends React.Component {
             <ul className="userbox">
               <li className="hidden-mobile my-points">
                 <IconBit size="20" color="#ff7b00"/>
-                <span>95.000</span>
+                <span>{this.props.bits}</span>
               </li>
               <li className="hidden-mobile hidden-tablet"><a href="/#"><IconUser size="20"/></a></li>
               <li className={this.props.open ? "hidden-desktop menu open": "hidden-desktop menu"} onClick={ this.props.handleMenu }>
