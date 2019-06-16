@@ -6,7 +6,7 @@ export default function Header(){
           
           <div className="content">
             <h1>Presentamos <span>Aero</span>store</h1>
-            <h2>Sign up for a FREE membership to get exclusive discounts, early access to sales, and much more.</h2>
+            <h2>Sign up for a <span>FREE</span> membership to get exclusive discounts, early access to sales, and much more.</h2>
             <a href="/#" className="btn-primary">More information</a>
           </div>
           
