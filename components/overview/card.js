@@ -70,7 +70,7 @@ export default function Card({ title, description, picture}) {
           font-size: 15px;
           font-weight: 400;
 
-          margin: 0 0 20px 0;
+          margin: 0 0 40px 0;
         }
       `}</style>
     </>
