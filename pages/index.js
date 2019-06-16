@@ -6,11 +6,15 @@ import Header from '../components/header'
 import Benefict from '../components/benefict'
 import Overview from '../components/overview'
 
+import API from '../api/aerolab'
+
 export default class Home extends React.Component {
   constructor() {
     super()
 
     this.state = {
+      name: "",
+      bits: 0,
       open: false
     }
     this.handleMenu = this.handleMenu.bind(this);
@@ -18,11 +22,20 @@ export default class Home extends React.Component {
   handleMenu(){
     this.setState({open: !this.state.open})
   }
-
+  componentDidMount() {
+    API.get(`user/me`)
+      .then((res) => {
+        this.setState({
+          name: res.data.name,
+          bits: res.data.points
+        })
+      })
+      .catch(err => console.log(err))
+  }
   render () {
     return (
       <>
-        <Navbar size="36px" color="#ff7b00" position="relative" open={this.state.open} handleMenu={this.handleMenu}/>
+        <Navbar size="36px" color="#ff7b00" position="relative" open={this.state.open} handleMenu={this.handleMenu} bits={this.state.bits}/>
         <Navigation open={this.state.open}/>
         <Page
           title="Store | Aerolab"
