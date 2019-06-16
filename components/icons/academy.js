@@ -1,7 +1,7 @@
 export default function Icon({ size, color }) {
   return (
     <svg viewBox="0 0 24 24" height={size || '100'}>
-      <g fill="none" stroke={color} stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+      <g fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10">
 				<rect x=".5" y="2.5" width="23" height="17"/>
 				<line x1="6.5" x2="17.5" y1="23.5" y2="23.5"/>
 				<line x1="10.5" x2="10.5" y1="19.5" y2="23.5"/>
