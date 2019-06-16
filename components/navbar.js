@@ -2,7 +2,6 @@ import Logo from './logo'
 import Link from 'next/link'
 
 import IconUser from './icons/user'
-import IconMenu from './icons/menu'
 
 export default class Navbar extends React.Component {
   render() {
