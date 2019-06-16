@@ -56,7 +56,7 @@ export default class Overview extends React.Component {
               {this.state.products.map(product => 
                 <Product 
                   title={product.name}
-                  category="Fashion"
+                  category={product.category}
                   description="As a Developer you’re probably always looking to learn things and test new tools and technologies."
                   picture={product.img.url}
                   bits={product.cost}
