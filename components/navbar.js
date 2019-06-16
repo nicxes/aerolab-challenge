@@ -74,6 +74,8 @@ function Navbar({ size, color, position }) {
         ul li a:hover {color: #222;}
 
         .userbox {justify-content: flex-end;}
+        .userbox li a {color: #222;}
+        .userbox li a:hover, .userbox li.active {color: #ff7b00;}
 
         @media only screen and (max-width: 768px) {
           .container {grid-template-columns: 1fr 1fr;}
