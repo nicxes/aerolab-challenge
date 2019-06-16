@@ -31,6 +31,11 @@ export default class Home extends React.Component {
           <Overview/>
 
         </Page>
+        <style jsx global>{`
+          body {
+            overflow: ${this.state.open ? "hidden": "auto"}
+          }
+        `}</style>
       </>
     )
   }
