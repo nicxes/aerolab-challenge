@@ -36,6 +36,9 @@ export default function Benefict() {
       </div>
 
       <style jsx>{`
+        .benefit {
+          border-bottom: 1px solid #e9ebec;
+        }
         .benefit ul {
           padding: 20px 0;
           margin: 0;
