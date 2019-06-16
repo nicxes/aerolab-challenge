@@ -5,8 +5,8 @@ export default function Header(){
         <div className="container">
           
           <div className="content">
-            <h1>Aventuras en Airbnb</h1>
-            <h2>Excursiones a lugares extraordinarios: lo único que tienes que hacer es llegar.</h2>
+            <h1>Presentamos <span>Aero</span>store</h1>
+            <h2>Sign up for a FREE membership to get exclusive discounts, early access to sales, and much more.</h2>
             <a href="/#" className="btn-primary">More information</a>
           </div>
           
@@ -70,6 +70,7 @@ export default function Header(){
           color: #fff;
           background: #ff7b00;
         }
+        span {color: #ff7b00;}
       `}</style>
     </>
   )

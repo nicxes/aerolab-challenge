@@ -6,8 +6,8 @@ export default function Overview() {
       <section className="overview">
         <div className="container">
           
-          <h3 className="title">Popular Products</h3>
-          <p className="description">Una selección de alojamientos con calidad y diseño verificados</p>
+          <h3 className="title">Popular Categories</h3>
+          <p className="description">The most popular category in the last 24 hours.</p>
 
           <ul>
             <Card 
