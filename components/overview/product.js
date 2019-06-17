@@ -49,6 +49,7 @@ export default function Product({ title, category, description, picture, bits, d
           height: 100%;
           width: 100%;
 
+          border: 1px solid #eee;
           border-radius: 5px;
           object-fit: cover;
         }
