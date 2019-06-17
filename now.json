@@ -5,6 +5,12 @@
   "builds": [
     { "src": "next.config.js", "use": "@now/next" }
   ],
+  "build": {
+    "env": {
+      "AEROLAB_URL": "@base-url",
+      "AEROLAB_TOKEN": "@aerolab-token"
+    }
+  },
   "env": {
     "AEROLAB_URL": "@base-url",
     "AEROLAB_TOKEN": "@aerolab-token"
