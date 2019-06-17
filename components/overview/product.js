@@ -1,7 +1,7 @@
 import IconBit from '../icons/bits'
 import Link from 'next/link'
 
-export default function Product({ id, title, category, description, picture, price, discount, bits }) {
+export default function Product({ id, title, category, description, picture, picture_hd, price, discount, bits }) {
   return (
     <>
       <li className="product">
@@ -12,7 +12,7 @@ export default function Product({ id, title, category, description, picture, pri
             name: title,
             category: category,
             description: description,
-            picture: picture,
+            picture: picture_hd,
             price: price,
             discount: discount   
           }

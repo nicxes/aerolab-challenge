@@ -65,6 +65,7 @@ export default class Overview extends React.Component {
                   category={product.category}
                   description="As a Developer you’re probably always looking to learn things and test new tools and technologies."
                   picture={product.img.url}
+                  picture_hd={product.img.hdUrl}
                   price={product.cost}
                   bits={this.props.bits}
                 />
