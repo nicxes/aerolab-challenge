@@ -27,7 +27,7 @@ export default class Navbar extends React.Component {
             </ul>
 
             <ul className="userbox">
-              <li className="hidden-mobile my-points">
+              <li className="hidden-mobile hidden-tablet my-points">
                 <IconBit size="20" color="#ff7b00"/>
                 <span>{this.props.bits}</span>
               </li>
