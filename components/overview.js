@@ -60,6 +60,7 @@ export default class Overview extends React.Component {
               {this.state.products.slice(0, 8).map(product => 
                 <Product
                   key={product._id}
+                  id={product._id}
                   title={product.name}
                   category={product.category}
                   description="As a Developer you’re probably always looking to learn things and test new tools and technologies."
