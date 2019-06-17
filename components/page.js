@@ -42,6 +42,15 @@ function Page ({ title, description, children }) {
             transition: all 0.1s ease;
           }
 
+          ::-moz-selection {
+            color: #fff;
+            background: #ff7b00;
+          }
+          ::selection {
+            color: #fff; 
+            background: #ff7b00;
+          }
+
           @media only screen and (max-width: 425px) {
             .hidden-mobile {
               display: none !important;
