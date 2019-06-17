@@ -1,6 +1,6 @@
 import IconBit from '../icons/bits'
 
-export default function Product({ title, category, description, picture, bits, discount }) {
+export default function Product({ title, category, description, picture, price, discount, bits }) {
   return (
     <>
       <li className="product">
@@ -9,7 +9,7 @@ export default function Product({ title, category, description, picture, bits, d
           <article>
             <div className="picture">
               <img src={picture} alt={title}/>
-              <h4>You need 500 bits</h4>
+              {bits < price ? <h4>You need {price - bits} bits</h4> : null}
             </div>
 
             <div className="content">
@@ -18,16 +18,13 @@ export default function Product({ title, category, description, picture, bits, d
                 {title} 
                 <span className="bits">
                   <IconBit size="18" color="#ff7b00"/>
-                  <span className="value">{bits}</span>
+                  <span className="value">{price}</span>
                 </span>
               </h5>
               <p>{description}</p>
             </div>
 
             <hr/>
-
-
-
           </article>
 
         </a>
