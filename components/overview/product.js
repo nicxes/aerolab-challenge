@@ -7,7 +7,19 @@ export default function Product({ id, title, category, description, picture, pri
       <li className="product">
         <Link href={`/product?id=${id}`}>
           <a target="_blank">
-
+        <Link as={`/p/${id}`} href={{
+          pathname: '/product',
+          query: {
+            id: id,
+            name: title,
+            category: category,
+            description: description,
+            picture: picture,
+            price: price,
+            discount: discount   
+          }
+        }}>
+          <a>
             <article>
               <div className="picture">
                 <img src={picture} alt={title}/>
@@ -28,7 +40,6 @@ export default function Product({ id, title, category, description, picture, pri
 
               <hr/>
             </article>
-
           </a>
         </Link>
       </li>
