@@ -66,6 +66,19 @@ class Product extends React.Component {
                 <p className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus, ligula ut viverra volutpat, sapien elit convallis justo, tristique feugiat neque orci et tortor. Integer tincidunt odio a magna pellentesque, et dapibus mi egestas. Morbi volutpat varius pharetra. Proin ut ante a magna pulvinar pellentesque quis eu enim. Morbi feugiat magna mi, eget mattis elit lacinia accumsan. Nullam vel ipsum mi. Cras faucibus, odio et convallis laoreet</p>
                 
                 <hr/>
+                
+                <h5 className="subtitle">Specifications</h5>
+                <ul className="spec">
+                  <li>Brand: <span>Apple</span></li>
+                  <li>Model: <span>2019</span></li>
+                  <li>Color: <span>Black</span></li>
+                  <li>Operative System: <span>iOS 13</span></li>
+                  <li>Display: <span>Liquid Retina HD display 6.1"</span></li>
+                  <li>Capacity: <span>32GB</span></li>
+                </ul>
+                
+                <hr/>
+
               </article>
 
             </div>
@@ -108,30 +121,51 @@ class Product extends React.Component {
           .price span {
             margin-left: 10px;
           }
-          .category {
+          
+          .product .category {
             color: #ff7b00;
             font-size: 14px;
             text-transform: uppercase;
 
             margin: 0;
           }
-          .subtitle {
+          .product .subtitle {
             color: #222;
             font-size: 18px;
             font-weight: 600;
 
             margin: 0 0 15px 0;
           }
-          .text {
+          .product .text {
             color: #666;
             font-weight: 400;
             line-height: 25px;
 
             margin: 0 0 20px 0;
           }
-          hr {
+          .product hr {
             border: 1px solid #eee;
             margin: 40px 0;
+          }
+          .product .spec {
+            padding: 0;
+            margin: 0;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 20px;
+          }
+          .product .spec li {
+            color: #a0a0a0;
+            font-weight: 400;
+            list-style: none;
+          }
+          .product .spec li span {
+            color: #222;
+            font-size: 18px;
+
+            display: block;
+            margin: 5px 0 0 0;
           }
 
           @media only screen and (min-width: 769px) {
@@ -146,6 +180,10 @@ class Product extends React.Component {
               position: absolute;
               top: 80px;
               right: 20px;
+            }
+            .product .spec {
+              grid-template-columns: repeat(2, 1fr);
+              grid-gap: 25px;
             }
           }
         `}</style>
