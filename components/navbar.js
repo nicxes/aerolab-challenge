@@ -45,6 +45,11 @@ export default class Navbar extends React.Component {
         <style jsx>{`
           .navbar {
             position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 997;
+
             background: #fff;
             border-bottom: 1px solid #EBEBEB;
             padding: 15px 0;
