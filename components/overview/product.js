@@ -5,8 +5,6 @@ export default function Product({ id, title, category, description, picture, pri
   return (
     <>
       <li className="product">
-        <Link href={`/product?id=${id}`}>
-          <a target="_blank">
         <Link as={`/p/${id}`} href={{
           pathname: '/product',
           query: {
