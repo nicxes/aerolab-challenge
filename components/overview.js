@@ -15,9 +15,7 @@ export default class Overview extends React.Component {
   componentDidMount() {
     API.get(`products`)
       .then((res) => {
-        this.setState({
-          products: res.data
-        })
+        this.setState({products: res.data})
       })
       .catch(err => console.log(err))
   }
@@ -59,14 +57,15 @@ export default class Overview extends React.Component {
             <p className="description">The most popular products in the last 24 hours.</p>
 
             <ul className="products">
-              {this.state.products.map(product => 
+              {this.state.products.slice(0, 8).map(product => 
                 <Product
                   key={product._id}
                   title={product.name}
                   category={product.category}
                   description="As a Developer you’re probably always looking to learn things and test new tools and technologies."
                   picture={product.img.url}
-                  bits={product.cost}
+                  price={product.cost}
+                  bits={this.props.bits}
                 />
               )}
             </ul>
