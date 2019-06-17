@@ -6,7 +6,7 @@ import Navigation from '../components/navigation'
 
 import API from '../api/aerolab'
 
-export default class Product extends React.Component {
+class Product extends React.Component {
   constructor() {
     super()
 
@@ -29,18 +29,24 @@ export default class Product extends React.Component {
         })
       })
       .catch(err => console.log(err))
+    console.log(this.props.router.query)
   }
   render(){
     return(
       <>
-        <Navbar size="36px" color="#ff7b00" position="relative" open={this.state.open} handleMenu={this.handleMenu} bits={this.state.bits}/>
+        <Navbar size="36px" color="#ff7b00" open={this.state.open} handleMenu={this.handleMenu} bits={this.state.bits}/>
         <Navigation open={this.state.open}/>
         <Page
-          title="Product Name"
-          description="We're a Digital Product Agency that believes in combining user-centered design with cutting-edge technology to build products that make people happy."
+          title={this.props.router.query.name + " | Aerolab"}
+          description={this.props.router.query.description}
         >
+          <div className="container">
+
+          </div>
         </Page>
       </>
     )
   }
 }
+
+export default withRouter(Product)
