@@ -44,7 +44,7 @@ export default class Home extends React.Component {
 
           <Header/>
           <Benefict/>
-          <Overview/>
+          <Overview bits={this.state.bits}/>
 
         </Page>
         <style jsx global>{`
