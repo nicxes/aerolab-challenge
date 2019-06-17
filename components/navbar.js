@@ -8,7 +8,7 @@ export default class Navbar extends React.Component {
   render() {
     return (
       <>
-        <nav className={"navbar " + this.props.position}>
+        <nav className="navbar">
           <div className="container">
 
             <Link href="/">
@@ -53,15 +53,6 @@ export default class Navbar extends React.Component {
             display: grid;
             grid-template-columns: 1fr 16fr 5fr;
             align-items: center;
-          }
-          .fixed {
-            position: ${this.props.position};
-            background: transparent;
-            top: 0;
-            right: 0;
-            left: 0;
-
-            z-index: 998;
           }
           ul {
             padding: 0;
