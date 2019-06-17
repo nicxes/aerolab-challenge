@@ -1,4 +1,4 @@
-import Card from './overview/card'
+import Category from './overview/category'
 import Product from './overview/product'
 
 import API from '../api/aerolab'
@@ -32,22 +32,28 @@ export default class Overview extends React.Component {
             <p className="description">The most popular category in the last 24 hours.</p>
 
             <ul className="categories">
-              <Card 
+              <Category 
                 title="Developers Tools"
                 description="As a Developer you’re probably always looking to learn things and test new tools and technologies. Start working with grids right now with this HTML & CSS boilerplate, and learn how to apply."
                 picture="https://images.unsplash.com/photo-1526925539332-aa3b66e35444?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80"
               />
-              <Card 
+              <Category 
                 title="Design Tools"
                 description="As a Developer you’re probably always looking to learn things and test new tools and technologies. Start working with grids right now with this HTML & CSS boilerplate, and learn how to apply."
                 picture="https://images.unsplash.com/photo-1550867428-138aec9fce23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80"
               />
-              <Card 
+              <Category 
                 title="Random"
                 description="As a Developer you’re probably always looking to learn things and test new tools and technologies. Start working with grids right now with this HTML & CSS boilerplate, and learn how to apply."
                 picture="https://images.unsplash.com/photo-1461748659110-16121c049d52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
               />
             </ul>
+
+          </div>
+        </section>
+
+        <section className="overview products">
+          <div className="container">
 
             <h3 className="title">Popular Products</h3>
             <p className="description">The most popular products in the last 24 hours.</p>
@@ -76,6 +82,7 @@ export default class Overview extends React.Component {
             position: relative;
             padding: 30px 0;
           }
+          .overview.products {background: #f8f9fa;}
           .title {
             font-size: 28px;
             font-weight: 600;
