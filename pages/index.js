@@ -35,7 +35,7 @@ export default class Home extends React.Component {
   render () {
     return (
       <>
-        <Navbar size="36px" color="#ff7b00" position="relative" open={this.state.open} handleMenu={this.handleMenu} bits={this.state.bits}/>
+        <Navbar size="36px" color="#ff7b00" open={this.state.open} handleMenu={this.handleMenu} bits={this.state.bits}/>
         <Navigation open={this.state.open}/>
         <Page
           title="Store | Aerolab"
