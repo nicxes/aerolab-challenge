@@ -1,33 +1,36 @@
 import IconBit from '../icons/bits'
+import Link from 'next/link'
 
-export default function Product({ title, category, description, picture, price, discount, bits }) {
+export default function Product({ id, title, category, description, picture, price, discount, bits }) {
   return (
     <>
       <li className="product">
-        <a href="/" target="_blank">
+        <Link href={`/product?id=${id}`}>
+          <a target="_blank">
 
-          <article>
-            <div className="picture">
-              <img src={picture} alt={title}/>
-              {bits < price ? <h4>You need {price - bits} bits</h4> : null}
-            </div>
+            <article>
+              <div className="picture">
+                <img src={picture} alt={title}/>
+                {bits < price ? <h4>You need {price - bits} bits</h4> : null}
+              </div>
 
-            <div className="content">
-              <h6>{category} <span className="discount">{discount}</span></h6>
-              <h5>
-                {title} 
-                <span className="bits">
-                  <IconBit size="18" color="#ff7b00"/>
-                  <span className="value">{price}</span>
-                </span>
-              </h5>
-              <p>{description}</p>
-            </div>
+              <div className="content">
+                <h6>{category} <span className="discount">{discount}</span></h6>
+                <h5>
+                  {title} 
+                  <span className="bits">
+                    <IconBit size="18" color="#ff7b00"/>
+                    <span className="value">{price}</span>
+                  </span>
+                </h5>
+                <p>{description}</p>
+              </div>
 
-            <hr/>
-          </article>
+              <hr/>
+            </article>
 
-        </a>
+          </a>
+        </Link>
       </li>
 
       <style jsx>{`
