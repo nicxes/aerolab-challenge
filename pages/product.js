@@ -141,6 +141,13 @@ class Product extends React.Component {
             }
             .text {max-width: 80%;}
           }
+          @media only screen and (max-width: 600px) {
+            .price {
+              position: absolute;
+              top: 80px;
+              right: 20px;
+            }
+          }
         `}</style>
       </>
     )
