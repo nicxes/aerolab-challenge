@@ -39,8 +39,7 @@ export default class Home extends React.Component {
         <Navigation open={this.state.open}/>
         <Page
           title="Store | Aerolab"
-          description="We're a Digital Product Agency that believes in combining user-centered design with cutting-edge technology to build products that make people happy."
-        >
+          description="We're a Digital Product Agency that believes in combining user-centered design with cutting-edge technology to build products that make people happy.">
 
           <Header/>
           <Benefict/>
