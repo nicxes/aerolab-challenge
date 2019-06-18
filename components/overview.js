@@ -73,7 +73,7 @@ export default class Overview extends React.Component {
             </ul>
 
             <div className="show-more">
-              <a href="/">Mostrar más (más de 2000)</a>
+              <a href="/overview">Mostrar más (más de 2000)</a>
             </div>
             
           </div>
