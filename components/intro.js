@@ -1,5 +1,3 @@
-import Search from './search'
-
 function Intro({InputChange}) {
   return (
     <>
