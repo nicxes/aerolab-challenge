@@ -1,5 +1,5 @@
-import Category from './overview/category'
-import Product from './overview/product'
+import Category from './category'
+import Product from './product'
 
 import API from '../api/aerolab'
 
@@ -127,7 +127,6 @@ export default class Overview extends React.Component {
             }
             ul.products {grid-template-columns: repeat(4, 1fr);}
           }
-
         `}</style>
       </>
     )
