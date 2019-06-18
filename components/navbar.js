@@ -18,25 +18,31 @@ export default class Navbar extends React.Component {
             </Link>
 
             <ul className="menu hidden-mobile hidden-tablet">
-              <li><Link href="/"><a className="active">Overview</a></Link></li>
-              <li><Link href="/explore"><a>Explore</a></Link></li>
-              <li><Link href="/#"><a>Community</a></Link></li>
-              <li><Link href="/#"><a>Shipping</a></Link></li>
+              <li><Link href="/"><a title="A simple look to our store">Overview</a></Link></li>
+              <li><Link href="/explore"><a title="Unlimited access to a growing library of resources">Explore</a></Link></li>
+              <li><Link href="/#"><a title="Join the AeroSquad and let us to support our community!">Community</a></Link></li>
+              <li><Link href="/#"><a title="Where do you ship your products from?">Shipping</a></Link></li>
               <li><Link href="/#"><a title="Official Aerolab blog">Blog</a></Link></li>
               <li><Link href="/#"><a title="Need help? We've got your back.">Help</a></Link></li>
             </ul>
 
             <ul className="userbox">
+
               <li className="hidden-mobile hidden-tablet my-points">
                 <IconBit size="20" color="#ff7b00"/>
                 <span>{this.props.bits}</span>
               </li>
-              <li className="hidden-mobile hidden-tablet"><a href="/#"><IconUser size="20"/></a></li>
+
+              <li className="hidden-mobile hidden-tablet">
+                <IconUser size="20"/>
+              </li>
+
               <li className={this.props.open ? "hidden-desktop menu open": "hidden-desktop menu"} onClick={ this.props.handleMenu }>
                 <span className="line line-top"></span>
                 <span className="line line-mid"></span>
                 <span className="line line-bot"></span>
               </li>
+
             </ul>
             
           </div>
@@ -50,7 +56,7 @@ export default class Navbar extends React.Component {
             right: 0;
             z-index: 997;
 
-            background: #fff;
+            background-color: #fff;
             border-bottom: 1px solid #EBEBEB;
             padding: 15px 0;
           }
@@ -72,15 +78,11 @@ export default class Navbar extends React.Component {
           ul li a {
             color: #a0a0a0;
             font-weight: 600;
-            text-decoration: none;
-            transition: all 0.1s ease;
           }
           ul li a.active {color: #222;}
           ul li a:hover {color: #222;}
 
           .userbox {justify-content: flex-end;}
-          .userbox li a {color: #222;}
-          .userbox li a:hover, .userbox li.active {color: #ff7b00;}
           .userbox li.menu {
             cursor: pointer;
             height: 32px;
