@@ -9,7 +9,9 @@ export default function Benefict() {
         <ul>
 
           <li>
-            <div className="icon"><IconTruck size="40" color="#ff7b00"/></div>
+            <div className="icon">
+              <IconTruck size="40" color="#ff7b00"/>
+            </div>
             <div className="content">
               <h5>Free standard shipping</h5>
               <p>Enjoy free shipping on orders over $19.99</p>
@@ -17,7 +19,9 @@ export default function Benefict() {
           </li>
 
           <li>
-            <div className="icon"><IconPackage size="40" color="#ff7b00"/></div>
+            <div className="icon">
+              <IconPackage size="40" color="#ff7b00"/>
+            </div>
             <div className="content">
               <h5>30-day return policy</h5>
               <p>Return your order within 30 days. No questions asked.</p>
@@ -25,7 +29,9 @@ export default function Benefict() {
           </li>
 
           <li>
-            <div className="icon"><IconAcademy size="40" color="#ff7b00"/></div>
+            <div className="icon">
+              <IconAcademy size="40" color="#ff7b00"/>
+            </div>
             <div className="content">
               <h5>Exclusive member benefits</h5>
               <p>Sign up to unlock membership pricing. Tell me more.</p>
@@ -37,6 +43,7 @@ export default function Benefict() {
 
       <style jsx>{`
         .benefit {
+          position: relative;
           border-bottom: 1px solid #e9ebec;
         }
         .benefit ul {
@@ -54,6 +61,7 @@ export default function Benefict() {
           align-items: center;
         }
         .benefit .icon {margin-right: 20px;}
+
         .benefit h5 {
           font-size: 16px;
           margin: 0;
@@ -68,8 +76,7 @@ export default function Benefict() {
             grid-template-columns: 1fr;
             padding: 30px 0;
           }
-          .benefit ul li {margin-bottom: 20px;}
-          .benefit ul li:last-child {margin: 0;}
+          .benefit ul li {grid-row: 20px;}
         }
       `}</style>
     </section>
