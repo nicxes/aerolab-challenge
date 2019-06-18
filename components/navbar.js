@@ -18,8 +18,8 @@ export default class Navbar extends React.Component {
             </Link>
 
             <ul className="menu hidden-mobile hidden-tablet">
-              <li><Link href="/#"><a className="active">Overview</a></Link></li>
-              <li><Link href="/#"><a>Explore</a></Link></li>
+              <li><Link href="/"><a className="active">Overview</a></Link></li>
+              <li><Link href="/explore"><a>Explore</a></Link></li>
               <li><Link href="/#"><a>Community</a></Link></li>
               <li><Link href="/#"><a>Shipping</a></Link></li>
               <li><Link href="/#"><a title="Official Aerolab blog">Blog</a></Link></li>
