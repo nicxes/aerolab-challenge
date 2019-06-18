@@ -5,8 +5,8 @@ export default function Header(){
         <div className="container">
           
           <div className="content">
-            <h1>Presentamos <span>Aero</span>store</h1>
-            <h2>Sign up for a <span>FREE</span> membership to get exclusive discounts, early access to sales, and much more.</h2>
+            <h1>Presentamos <span className="orange">Aero</span>store</h1>
+            <h2>Sign up for a <span className="orange">FREE</span> membership to get exclusive discounts, early access to sales, and much more.</h2>
             <a href="/#" className="btn-primary">More information</a>
           </div>
           
@@ -29,17 +29,10 @@ export default function Header(){
         .container {
           display: grid;
           grid-template-columns: 1fr;
-          column-gap: 20px;
           align-content: center;
 
           height: 100%;
         }
-        @media only screen and (max-width: 768px) {
-          .container {
-            grid-template-columns: 1fr;
-          }
-        }
-
         h1 {
           font-size: 38px;
           font-weight: bold;
@@ -63,14 +56,12 @@ export default function Header(){
           border-radius: 4px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
           padding: 10px 25px;
-
-          transition: all 0.1s ease;
         }
         .btn-primary:hover {
           color: #fff;
           background: #ff7b00;
         }
-        span {color: #ff7b00;}
+        .orange {color: #ff7b00;}
       `}</style>
     </>
   )
