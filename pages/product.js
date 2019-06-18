@@ -64,7 +64,11 @@ class Product extends React.Component {
                 <h5 className="subtitle">About the product</h5>
                 <p className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus, ligula ut viverra volutpat, sapien elit convallis justo, tristique feugiat neque orci et tortor. Integer tincidunt odio a magna pellentesque, et dapibus mi egestas. Morbi volutpat varius pharetra. Proin ut ante a magna pulvinar pellentesque quis eu enim. Morbi feugiat magna mi, eget mattis elit lacinia accumsan. Nullam vel ipsum mi. Cras faucibus, odio et convallis laoreet</p>
                 <div>
-                  <a href="" className="btn btn-primary">Redeem now</a>
+                  {this.state.bits < this.props.router.query.price
+                    ? <a href="#" className="btn btn-secundary">You dont have enough points</a>
+                    : <a href="#" className="btn btn-primary">Redeem now</a>
+                  }
+                  
                 </div>
               </article>
 
@@ -157,16 +161,17 @@ class Product extends React.Component {
             margin: 0;
           }
           .product-head .price span {margin-left: 10px;}
-          .product-head .btn-primary {
+          .product-head .btn {
             color: #fff;
             font-weight: 600;
 
-            background: #ff7b00;
             box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
             border-radius: 5px;
 
             padding: 10px 30px;
           }
+          .product-head .btn-primary {background: #ff7b00;}
+          .product-head .btn-secundary {background: #000;}
 
 
           .product-section {
