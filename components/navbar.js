@@ -28,12 +28,12 @@ export default class Navbar extends React.Component {
 
             <ul className="userbox">
 
-              <li className="hidden-mobile hidden-tablet my-points">
+              <li className="hidden-mobile hidden-tablet my-points" title="Your current points">
                 <IconBit size="20" color="#ff7b00"/>
                 <span>{this.props.bits}</span>
               </li>
 
-              <li className="hidden-mobile hidden-tablet">
+              <li className="hidden-mobile hidden-tablet" title="Check your account information">
                 <IconUser size="20"/>
               </li>
 
@@ -110,8 +110,15 @@ export default class Navbar extends React.Component {
           .userbox .my-points {
             display: flex;
             align-items: center;
+            
+            cursor: help;
           }
-          .userbox .my-points span {margin-left: 5px;}
+          .userbox .my-points span {
+            color: #ff7b00;
+            font-weight: 600;
+
+            margin: 0 0 0 5px;
+          }
 
           @media only screen and (max-width: 768px) {
             .container {grid-template-columns: 1fr 1fr;}
