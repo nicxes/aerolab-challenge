@@ -10,7 +10,7 @@ function Page ({ title, description, children }) {
         <meta name="keywords" content="Aerolab, Aerostore, shop, ecommerce"/>
         <meta name="author" content="@Nicxes"/>
         
-        <meta name="theme-color" content="#0ad4fa"/>
+        <meta name="theme-color" content="#ff7b00"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <link rel="mask-icon" href="static/images/favicon.svg" color="#ff7b00"/>
