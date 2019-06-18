@@ -42,7 +42,7 @@ class Product extends React.Component {
           title={this.props.router.query.name + " | Aerolab"}
           description={this.props.router.query.description}
         >
-          <section className="product">
+          <header className="product-head">
             <div className="container">
 
               <aside className="aside">
@@ -64,103 +64,138 @@ class Product extends React.Component {
 
                 <h5 className="subtitle">About the product</h5>
                 <p className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus, ligula ut viverra volutpat, sapien elit convallis justo, tristique feugiat neque orci et tortor. Integer tincidunt odio a magna pellentesque, et dapibus mi egestas. Morbi volutpat varius pharetra. Proin ut ante a magna pulvinar pellentesque quis eu enim. Morbi feugiat magna mi, eget mattis elit lacinia accumsan. Nullam vel ipsum mi. Cras faucibus, odio et convallis laoreet</p>
-                
-                <hr/>
-                
-                <h5 className="subtitle">Specifications</h5>
-                <ul className="spec">
-                  <li>Brand: <span>Apple</span></li>
-                  <li>Model: <span>2019</span></li>
-                  <li>Color: <span>Black</span></li>
-                  <li>Operative System: <span>iOS 13</span></li>
-                  <li>Display: <span>Liquid Retina HD display 6.1"</span></li>
-                  <li>Capacity: <span>32GB</span></li>
-                </ul>
-                
-                <hr/>
-
+                <div>
+                  <a href="" className="btn btn-primary">Redeem now</a>
+                </div>
               </article>
 
             </div>
+          </header>
+
+          <section className="product-section">
+            <div className="container">
+
+              <aside className="aside">
+                <h3>Specifications</h3>
+              </aside>
+            
+              <article className="article">
+                <ul className="spec">
+                  <li>Capacity: <span>64GB or 256GB</span></li>
+                  <li>Display: <span>Retina HD display</span></li>
+                  <li>Chip: <span>A11 Bionic chip</span></li>
+                  <li>Camera: <span>12MP camera</span></li>
+                  <li>Video Recording: <span>4K video at 60 fps</span></li>
+                  <li>FaceTime HD Camera: <span>7MP camera 1080p HD</span></li>
+                  <li>Touch ID: <span>Fingerprint sensor</span></li>
+                  <li>Apple Pay: <span>Pay with your iPhone.</span></li>
+                  <li>Siri: <span>Activate hands-free with your voice</span></li>
+                  <li>Battery: <span>Up to 14 hours</span></li>
+                  <li>Fast-charge capable: <span>Up to 50% charge in 30m</span></li>
+                  <li>Operating System: <span>iOS 13</span></li>
+                </ul>
+              </article>
+            
+            </div>
           </section>
+
+          <section className="product-section">
+            <div className="container">
+
+              <aside className="aside titles">
+                <h3 className="subtitle">People opinion</h3>
+              </aside>
+            
+              <article className="article">
+                
+              </article>
+            
+            </div>
+          </section>
+
         </Page>
 
         <style jsx>{`
-          .product {
-            margin: 50px 0;
-          }
           .container {
             display: grid;
             grid-template-columns: 1fr;
-            justify-items: center;
             row-gap: 30px;
           }
 
-          .picture img {max-width: 100%;}
-
-          .metadata {
-            display: flex;
-            justify-content: space-between;
-
-            margin: 0 0 20px 0;
+          .product-head {
+            position: relative;
+            margin: 50px 0;
           }
-          .title {
-            color: #222;
-            font-size: 48px;
-
+          .product-head .picture {
+            text-align: center;}
+          .product-head .picture img {
+            max-width: 100%;
+            border: 1px solid #eee;
+            border-radius: 5px;
+          }
+          .product-head .category {
+            color: #ff7b00;
+            font-size: 14px;
+            text-transform: uppercase;
             margin: 0;
           }
-          .price {
+          .product-head .metadata {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 20px 0;
+          }
+          .product-head .title {
+            color: #222;
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+          }
+          .product-head .price {
             color: #ff7b00;
             font-size: 48px;
-
             display: flex;
             align-items: center;
             margin: 0;
           }
-          .price span {
-            margin-left: 10px;
-          }
-          
-          .product .category {
-            color: #ff7b00;
-            font-size: 14px;
-            text-transform: uppercase;
-
-            margin: 0;
-          }
-          .product .subtitle {
-            color: #222;
-            font-size: 18px;
+          .product-head .price span {margin-left: 10px;}
+          .product-head .btn-primary {
+            color: #fff;
             font-weight: 600;
 
-            margin: 0 0 15px 0;
-          }
-          .product .text {
-            color: #666;
-            font-weight: 400;
-            line-height: 25px;
+            background: #ff7b00;
+            box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+            border-radius: 5px;
 
-            margin: 0 0 20px 0;
+            padding: 10px 30px;
           }
-          .product hr {
-            border: 1px solid #eee;
-            margin: 40px 0;
+
+
+          .product-section {
+            position: relative;
+            margin: 60px 0 80px 0;
           }
-          .product .spec {
+          .product-section .aside h3 {
+            color: #222;
+            font-size: 32px;
+            font-weight: 600;
+
+            margin: 0;
+          } 
+          .product-section .spec {
             padding: 0;
             margin: 0;
 
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             row-gap: 20px;
+            grid-gap: 15px;
           }
-          .product .spec li {
+          .product-section .spec li {
             color: #a0a0a0;
             font-weight: 400;
             list-style: none;
           }
-          .product .spec li span {
+          .product-section .spec li span {
             color: #222;
             font-size: 18px;
 
@@ -168,23 +203,48 @@ class Product extends React.Component {
             margin: 5px 0 0 0;
           }
 
+
+          .product-head .subtitle,
+          .product-section .subtitle {
+            color: #222;
+            font-size: 18px;
+            font-weight: 600;
+
+            margin: 0 0 15px 0;
+          }
+          .product-head .text,
+          .product-section .text {
+            color: #666;
+            font-weight: 400;
+            line-height: 25px;
+
+            margin: 0 0 40px 0;
+          }
+          .product-head hr,
+          .product-section hr {
+            border: 1px solid #eee;
+            margin: 40px 0;
+          }
+
+
           @media only screen and (min-width: 769px) {
             .container {
               grid-template-columns: 1fr 2fr;
               grid-gap: 25px;
             }
-            .text {max-width: 80%;}
+            .product-head .text,
+            .product-section .text {max-width: 80%;}
+
+            .product-section aside h3 {max-width: 70%;}
           }
           @media only screen and (max-width: 600px) {
-            .price {
+            .product-head .price {
               position: absolute;
-              top: 80px;
+              top: -30px;
               right: 20px;
             }
-            .product .spec {
-              grid-template-columns: repeat(2, 1fr);
-              grid-gap: 25px;
-            }
+            .product-head .picture img {border: 0;}
+            .product-section .spec {grid-template-columns: repeat(2, 1fr);}
           }
         `}</style>
       </>
