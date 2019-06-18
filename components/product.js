@@ -93,7 +93,7 @@ export default function Product({ id, title, category, description, picture, pic
           color: #fff;
           font-size: 14px;
           text-align: center;
-          background: rgba(0,0,0,0.5);
+          background: rgba(0,0,0,0.8);
         }
         .product h5 {
           color: #222;
