@@ -1,19 +1,19 @@
 import IconBit from './icons/bits'
 import IconArrowDown from './icons/arrow-down'
 
-function Filter() {
+function Filter({sortByPrice, sortByName}) {
   return (
     <>
       <section className="filter">
         <div className="container">
 
           <ul>
-            <li>
+            <li onClick={sortByPrice}>
               <IconBit color="#ff7b00" size="20"/>
               <span className="text">Points</span>
               <IconArrowDown color="#a0a0a0" size="10"/>
             </li>
-            <li>
+            <li onClick={sortByName}>
               <span className="text">A - Z</span>
               <IconArrowDown color="#a0a0a0" size="10"/>
             </li>
@@ -46,6 +46,11 @@ function Filter() {
           align-items: center;
           justify-content: center;
           cursor:pointer;
+
+          transition: all 0.2s;
+        }
+        .filter ul li:hover {
+          background: #f4f4f4;
         }
         .filter ul li span {margin: 0 10px;}
         .filter ul li:last-child {border-right: 1px solid #e9ebec;}

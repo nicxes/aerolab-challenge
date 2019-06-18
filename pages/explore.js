@@ -17,12 +17,13 @@ export default class Home extends React.Component {
       bits: 0,
       open: false,
       products: [],
-      search: ""
+      search: "",
+      sortPrice: false,
+      sortName: false
     }
-    this.handleMenu = this.handleMenu.bind(this);
-  }
-  handleMenu(){
-    this.setState({open: !this.state.open})
+    this.handleMenu = this.handleMenu.bind(this)
+    this.sortByPrice = this.sortByPrice.bind(this)
+    this.sortByName = this.sortByName.bind(this)
   }
   componentDidMount() {
     API.get(`user/me`)
@@ -40,6 +41,29 @@ export default class Home extends React.Component {
       })
       .catch(err => console.log(err))
   }
+  handleMenu(){
+    this.setState({open: !this.state.open})
+  }
+  sortByPrice() {
+    this.setState({
+      products: this.state.products.sort(
+        this.state.sortPrice === false
+          ? (a, b) => (a.cost - b.cost)
+          : (a, b) => (b.cost - a.cost)
+      ),
+      sortPrice: !this.state.sortPrice
+    })
+  }
+  sortByName() {
+    this.setState({
+      products: this.state.products.sort(
+        this.state.sortName === false
+          ? (a, b) => (a.name < b.name)
+          : (a, b) => (b.name > a.name)
+      ),
+      sortName: !this.state.sortName
+    })
+  }
   render () {
     return (
       <>
@@ -50,7 +74,7 @@ export default class Home extends React.Component {
           description="We're a Digital Product Agency that believes in combining user-centered design with cutting-edge technology to build products that make people happy.">
           
           <Intro InputChange={text => this.setState({search: text})}/>
-          <Filter/>
+          <Filter sortByPrice={this.sortByPrice} sortByName={this.sortByName}/>
 
           <section className="products">
             <div className="container">
@@ -68,7 +92,7 @@ export default class Home extends React.Component {
                     picture={product.img.url}
                     picture_hd={product.img.hdUrl}
                     price={product.cost}
-                    bits={this.props.bits}
+                    bits={this.state.bits}
                   />
                 )}
               </ul>
