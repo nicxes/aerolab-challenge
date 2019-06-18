@@ -7,7 +7,7 @@ function Page ({ title, description, children }) {
         <title>{title || 'Aerolab'}</title>
 
         <meta name="description" content={description || 'Aerolab'} />
-        <meta name="keywords" content="Aerolab"/>
+        <meta name="keywords" content="Aerolab, Aerostore, shop, ecommerce"/>
         <meta name="author" content="@Nicxes"/>
         
         <meta name="theme-color" content="#0ad4fa"/>
