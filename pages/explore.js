@@ -3,6 +3,7 @@ import Page from '../components/page'
 import Navbar from '../components/navbar'
 import Navigation from '../components/navigation'
 import Intro from '../components/intro'
+import Filter from '../components/filter'
 
 import API from '../api/aerolab'
 
@@ -40,6 +41,7 @@ export default class Home extends React.Component {
           description="We're a Digital Product Agency that believes in combining user-centered design with cutting-edge technology to build products that make people happy.">
           
           <Intro/>
+          <Filter/>
         
         </Page>
         
