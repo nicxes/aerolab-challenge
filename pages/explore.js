@@ -74,7 +74,9 @@ export default class Home extends React.Component {
           description="We're a Digital Product Agency that believes in combining user-centered design with cutting-edge technology to build products that make people happy.">
           
           <Intro InputChange={text => this.setState({search: text})}/>
-          <Filter sortByPrice={this.sortByPrice} sortByName={this.sortByName}/>
+          <Filter 
+            sortByPrice={this.sortByPrice} sortPrice={this.state.sortPrice}
+            sortByName={this.sortByName} sortName={this.state.sortName}/>
 
           <section className="products">
             <div className="container">

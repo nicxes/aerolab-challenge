@@ -1,7 +1,7 @@
 import IconBit from './icons/bits'
 import IconArrowDown from './icons/arrow-down'
 
-function Filter({sortByPrice, sortByName}) {
+function Filter({sortPrice, sortByPrice, sortName, sortByName}) {
   return (
     <>
       <section className="filter">
@@ -11,7 +11,9 @@ function Filter({sortByPrice, sortByName}) {
             <li onClick={sortByPrice}>
               <IconBit color="#ff7b00" size="20"/>
               <span className="text">Points</span>
-              <IconArrowDown color="#a0a0a0" size="10"/>
+              <span className="arrow">
+                <IconArrowDown color="#a0a0a0" size="10"/>
+              </span>
             </li>
             <li onClick={sortByName}>
               <span className="text">A - Z</span>
@@ -52,7 +54,8 @@ function Filter({sortByPrice, sortByName}) {
         .filter ul li:hover {
           background: #f4f4f4;
         }
-        .filter ul li span {margin: 0 10px;}
+        .filter ul li .arrow {transform: ${sortPrice ? "rotate(180deg)": ""}}
+        .filter ul li .text {margin: 0 10px;}
         .filter ul li:last-child {border-right: 1px solid #e9ebec;}
       `}</style>
     </>
