@@ -17,7 +17,7 @@ export default class Home extends React.Component {
       bits: 0,
       open: false
     }
-    this.handleMenu = this.handleMenu.bind(this);
+    this.handleMenu = this.handleMenu.bind(this)
   }
   handleMenu(){
     this.setState({open: !this.state.open})
