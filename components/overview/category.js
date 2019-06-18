@@ -54,7 +54,7 @@ export default function Category({ title, description, picture}) {
         }
         .category h3 {
           color: #fff;
-          font-size: 38px;
+          font-size: 32px;
           font-weight: bold;
           text-shadow: rgba(0, 0, 0, 1) 0px 0px 20px;
         }
