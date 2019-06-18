@@ -44,8 +44,8 @@ export default class Home extends React.Component {
           <Header/>
           <Benefict/>
           <Overview bits={this.state.bits}/>
-
         </Page>
+        
         <style jsx global>{`
           body {
             overflow: ${this.state.open ? "hidden": "auto"}
