@@ -54,7 +54,7 @@ function Filter({sortPrice, sortByPrice, sortName, sortByName}) {
         .filter ul li:hover {
           background: #f4f4f4;
         }
-        .filter ul li .arrow {transform: ${sortPrice ? "rotate(180deg)": ""}}
+        .filter ul li .arrow {transform: ${sortPrice ? "": "rotate(180deg)"}}
         .filter ul li .text {margin: 0 10px;}
         .filter ul li:last-child {border-right: 1px solid #e9ebec;}
       `}</style>
