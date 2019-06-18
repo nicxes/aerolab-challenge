@@ -1,4 +1,5 @@
 import { withRouter } from 'next/router'
+import Modal from 'react-modal'
 
 import Page from '../components/page'
 import Navbar from '../components/navbar'
@@ -15,9 +16,12 @@ class Product extends React.Component {
     this.state = {
       name: "",
       bits: 0,
-      open: false
+      open: false,
+      modal: false
     }
-    this.handleMenu = this.handleMenu.bind(this);
+    this.handleMenu = this.handleMenu.bind(this)
+    this.openModal = this.openModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
   }
   handleMenu(){
     this.setState({open: !this.state.open})
@@ -31,6 +35,12 @@ class Product extends React.Component {
         })
       })
       .catch(err => console.log(err))
+  }
+  openModal() {
+    this.setState({modal: true});
+  }
+  closeModal() {
+    this.setState({modal: false});
   }
   render(){
     return(
@@ -66,7 +76,7 @@ class Product extends React.Component {
                 <div>
                   {this.state.bits < this.props.router.query.price
                     ? <a href="#" className="btn btn-secundary">You dont have enough points</a>
-                    : <a href="#" className="btn btn-primary">Redeem now</a>
+                    : <a onClick={this.openModal} className="btn btn-primary">Redeem now</a>
                   }
                   
                 </div>
@@ -116,6 +126,26 @@ class Product extends React.Component {
             </div>
           </section>
 
+          <Modal isOpen={this.state.modal} onRequestClose={this.closeModal} className="modal" overlayClassName="modal-overlay" ariaHideApp={false}>
+            <h3 className="title">{this.props.router.query.name}</h3>
+            
+            <ul>
+              <li>
+                <span className="text">Your Balance</span>
+                <span className="cost">{this.state.bits}</span>
+              </li>
+              <li>
+                <span className="text">Product Cost</span>
+                <span className="cost">{this.props.router.query.price}</span>
+              </li>
+              <li className="total">
+                <span className="text">New Balance</span> 
+                <span className="cost">{this.state.bits - this.props.router.query.price}</span>
+              </li>
+            </ul>
+
+            <a className="btn btn-primary" onClick={this.closeModal}>Confirm</a>
+          </Modal>
         </Page>
 
         <style jsx>{`
@@ -170,8 +200,14 @@ class Product extends React.Component {
 
             padding: 10px 30px;
           }
-          .product-head .btn-primary {background: #ff7b00;}
-          .product-head .btn-secundary {background: #000;}
+          .product-head .btn-primary {
+            background: #ff7b00;
+            cursor: pointer;
+          }
+          .product-head .btn-secundary {
+            background: #000;
+            cursor: no-drop;
+          }
 
 
           .product-section {
@@ -230,7 +266,6 @@ class Product extends React.Component {
             margin: 40px 0;
           }
 
-
           @media only screen and (min-width: 769px) {
             .container {
               grid-template-columns: 1fr 2fr;
@@ -249,6 +284,67 @@ class Product extends React.Component {
             }
             .product-head .picture img {border: 0;}
             .product-section .spec {grid-template-columns: repeat(2, 1fr);}
+          }
+        `}</style>
+
+        <style jsx global>{`
+          .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+          }
+          .modal {
+            background-color: #fff;      
+            width: 100%;
+            max-width: 420px;
+
+            padding: 40px 30px;
+            outline: none;
+          }
+          .modal h3 {
+            font-size: 24px;
+            margin: 0;
+          }
+          .modal ul {
+            padding: 0;
+            margin: 20px 0;
+          }
+          .modal ul li {
+            list-style: none;
+
+            font-weight: 300;
+
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+          }
+          .modal ul li .cost {float: right;}
+          .modal ul li.total {font-weight: 600;}
+          .modal ul li.total .cost {color: #ff7b00;}
+          .modal .btn {
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+
+            background-color: #ff7b00;
+            box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+            border-radius: 5px;
+
+            padding: 10px 30px;
+            margin: 30px 0 0 0;
+
+            cursor: pointer;
+            display: block;
+          }
+          @media only screen and (min-width: 425px) {
+            .modal {border: 1px solid #eee;}
+            .modal-overlay {background: rgba(238,238,238,0.9)}
           }
         `}</style>
       </>
