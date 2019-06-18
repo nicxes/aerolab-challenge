@@ -85,10 +85,14 @@ export default class Navigation extends React.Component {
             background: #fff;
             opacity: 0;
             transition: all 0.2s ease-in;
+
+            visibility: hidden;
           }
           .navigation.open {
             height: calc(100% - 71px);
             opacity: 1;
+
+            visibility: visible;
           }
           .title {
             color: #838383;
