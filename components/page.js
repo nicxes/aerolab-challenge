@@ -26,22 +26,6 @@ function Page ({ title, description, children }) {
 
       <style jsx global>
         {`
-          body {
-            font-family: 'Source Sans Pro', sans-serif;
-
-            margin: 0;
-          }
-          .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-          }
-          h1, h2, h3, h4, h5, h6 {color: #222;}
-          a {
-            text-decoration: none;
-            transition: all 0.1s ease;
-          }
-
           ::-moz-selection {
             color: #fff;
             background: #ff7b00;
@@ -49,6 +33,20 @@ function Page ({ title, description, children }) {
           ::selection {
             color: #fff; 
             background: #ff7b00;
+          }
+          body {
+            color: #222;
+            font-family: 'Source Sans Pro', sans-serif;
+            margin: 0;
+          }
+          .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+          }
+          a {
+            text-decoration: none;
+            transition: all 0.1s ease;
           }
 
           @media only screen and (max-width: 425px) {
