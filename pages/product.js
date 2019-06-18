@@ -31,7 +31,6 @@ class Product extends React.Component {
         })
       })
       .catch(err => console.log(err))
-    console.log(this.props.router.query)
   }
   render(){
     return(
