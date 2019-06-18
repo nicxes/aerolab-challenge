@@ -85,6 +85,7 @@ export default class Overview extends React.Component {
             padding: 30px 0;
           }
           .overview.products {background: #f8f9fa;}
+
           .title {
             font-size: 28px;
             font-weight: 600;
