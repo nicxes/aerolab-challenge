@@ -5,6 +5,7 @@ import Navigation from '../components/navigation'
 import Header from '../components/header'
 import Benefict from '../components/benefict'
 import Overview from '../components/overview'
+import Hero from '../components/hero'
 
 import API from '../api/aerolab'
 
@@ -44,6 +45,7 @@ export default class Home extends React.Component {
           <Header/>
           <Benefict/>
           <Overview bits={this.state.bits}/>
+          <Hero/>
         </Page>
         
         <style jsx global>{`
